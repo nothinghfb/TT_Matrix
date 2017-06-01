@@ -4,8 +4,53 @@
 #include "stdafx.h"
 
 
+
 int main()
 {
+	cout << "¾ØÕó£á£º" << endl;
+	Matrix<double> a(2, 2);
+	a.inPut();
+	a.outPut();
+
+	cout << "¾ØÕó£â£º" << endl;
+	Matrix<double> b(2, 2);
+	b.inPut();
+	b.outPut();
+
+	cout << "¾ØÕó£ã£º" << endl;
+	Matrix<double> c = a + b;
+	c.outPut();
+
+	cout << "¾ØÕó£Ä£º" << endl;
+	Matrix<double> D = a;
+	D.outPut();
+
+	cout << "¾ØÕó£á×ªÖÃ£º" << endl;
+	a.outPut();
+	a.transpose();
+	a.outPut();
+
+	cout << "¾ØÕó£å¡¡£½¡¡£â£­£á£º" << endl;
+	Matrix<double> e = b - a;
+	e.outPut();
+
+	cout << "¾ØÕó£åÖØÅÅ£º" << endl;
+	e.reshape(1, 4);
+	e.outPut();
+	e.reshape(4, 1);
+	e.outPut();
+
+	cout << "¾ØÕó£æ£º" << endl;
+	Matrix<double> f(2, 3);
+	f.inPut();
+	f.outPut();
+	a.outPut();
+	cout << "¾ØÕó£á£ª£æ£º" << endl;
+	f = a * f;
+	f.outPut();
+	cout << "¾ØÕó£æµÄÄ££º" << endl;
+	cout << f.norm2() << endl << endl;;
+	system("pause");
     return 0;
 }
 
